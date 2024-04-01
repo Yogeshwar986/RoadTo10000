@@ -1,0 +1,4 @@
+''' Day1: Road to 10000
+Problem: Say "Hello, World!" With Python
+my_string= "Hello, World!"
+print(my_string)
