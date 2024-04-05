@@ -1,0 +1,8 @@
+''' Day 5: Road to 10000
+Problem: Loops'''
+
+#Source Code:
+n=int(input())
+for x in range(n):
+    print(x*x)
+        
