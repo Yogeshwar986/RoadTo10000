@@ -1,0 +1,8 @@
+''' Day 14:Road to 10000
+Problem:Tuple'''
+#Source Code:
+if __name__ == '__main__':
+    n = int(input())
+    Tuple1 = map(int, input().split())
+    t = tuple(Tuple1)
+    print(hash(t));
