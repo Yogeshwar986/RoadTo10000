@@ -1,0 +1,8 @@
+'''Day 31: Road to 10000
+Problem: Polar Coordinates'''
+#Source Code:
+import cmath
+n = input()
+s = complex(n)
+print(abs(s))
+print(cmath.phase(s))
