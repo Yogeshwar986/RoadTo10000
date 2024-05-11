@@ -1,0 +1,15 @@
+''' Day 41: Road to 10000
+Problem A: Word Order'''
+#Source Code
+Yash = int(input())
+counter_dict = {}
+words_list = []
+for i in range(Yash):
+  word = input()
+  words_list.append(word)
+  if word in counter_dict:
+    counter_dict[word] += 1
+  else:
+    counter_dict[word] = 1
+print(len(counter_dict))
+print(' '.join([str(counter_dict[word]) for word in counter_dict]))
