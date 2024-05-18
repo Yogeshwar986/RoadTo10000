@@ -1,0 +1,26 @@
+'''Day 48: Road to 10000
+Problem A: re.start() & re.end()'''
+import re
+string = input()
+substring = input()
+pattern = re.compile(substring)
+match = pattern.search(string)
+if not match: print('(-1, -1)')
+while match:
+    print('({0}, {1})'.format(match.start(), match.end() - 1))
+    match = pattern.search(string, match.start() + 1)
+
+
+
+#Problem B: Decorators 2:import operator
+def person_lister(func):
+    def inner(people):
+        return [ func(p) for p in sorted(people, key = lambda x: (int(x[2])))]
+    return inner
+@person_lister
+def name_format(person):
+    return ("Mr. " if person[3] == "M" else "Ms. ") + person[0] + " " + person[1]
+
+if __name__ == '__main__':
+    people = [input().split() for i in range(int(input()))]
+    print(*name_format(people), sep='\n')
