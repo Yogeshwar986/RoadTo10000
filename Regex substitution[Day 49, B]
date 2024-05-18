@@ -1,0 +1,5 @@
+'''Day 49: Road to 10000
+Problem B: Regex Substitution'''
+import re
+for _ in range(int(input())):
+    print(re.sub(r'(?<= )(&&|\|\|)(?= )', lambda x: 'and' if x.group() == '&&' else 'or', input()))
