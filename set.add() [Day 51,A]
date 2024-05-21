@@ -1,0 +1,7 @@
+'''Day 51: Road to 10000
+Problem: set.add()'''
+n = int(input())
+NAMES = set([])
+for i in range(n):
+    NAMES.add(input())
+print(len(NAMES))
