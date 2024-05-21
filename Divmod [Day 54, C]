@@ -1,0 +1,8 @@
+'''Day 54: Road to 10000
+Proble C: Divmod'''
+A = int(input())
+B = int(input())
+
+print(A//B)
+print(A%B)
+print(divmod(A, B))
