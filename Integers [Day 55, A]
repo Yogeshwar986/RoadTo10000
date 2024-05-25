@@ -1,0 +1,9 @@
+'''Day 55: Road to 10000
+Problem A: Integers'''
+
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+
+print((a**b)+(c**d))
