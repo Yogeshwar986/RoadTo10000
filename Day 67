@@ -1,0 +1,14 @@
+Problem A: mean var and std 
+import numpy as np
+
+N, M = list(map(int, input().split()))
+arr = np.array([[int(x) for x in input().split()] for i in range(N)])
+print(np.mean(arr, axis = 1))
+print(np.var(arr, axis = 0))
+print(round(np.std(arr, axis = None), 11))
+
+Problem B: Re.split()
+regex_pattern = r"[.,]+"	# Do not delete 'r'.
+
+import re
+print("\n".join(re.split(regex_pattern, input())))
