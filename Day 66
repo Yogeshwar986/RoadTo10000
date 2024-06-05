@@ -1,0 +1,87 @@
+PRoblem A: Floor Ceil and Rint
+
+import numpy
+numpy.set_printoptions(sign=' ')
+def arrays(arr):
+    arr1 = numpy.array(arr, dtype = float)
+
+    floor = numpy.floor(arr1)
+    ceil = numpy.ceil(arr1)
+    rint = numpy.rint(arr1)
+
+    return floor, ceil, rint    
+arr = input().strip().split(' ')
+floor, ceil, rint = arrays(arr)
+print(floor)
+print(ceil)
+print(rint)
+
+Problem B: Default Argument
+
+class EvenStream(object):
+    def __init__(self):
+        self.current = 0
+
+    def get_next(self):
+        to_return = self.current
+        self.current += 2
+        return to_return
+
+class OddStream(object):
+    def __init__(self):
+        self.current = 1
+
+    def get_next(self):
+        to_return = self.current
+        self.current += 2
+        return to_return
+
+def print_from_stream(n, stream=None):
+    if stream is None:
+        stream = EvenStream()
+    for _ in range(n):
+        print(stream.get_next())
+
+
+queries = int(input())
+for _ in range(queries):
+    stream_name, n = input().split()
+    n = int(n)
+    if stream_name == "even":
+        print_from_stream(n)
+    else:
+        print_from_stream(n, OddStream())
+
+Problem C: Re findalln finditer
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+m = re.findall(r"(?<=[^aeiou])([aeiou]{2,})(?=[^aeiou])", input(), re.IGNORECASE)
+
+if m:
+    print(*m, sep="\n")
+else:
+    print(-1)
+
+Problem D: Incorrect Regex
+import re
+T = int(input())
+for _ in range(T):
+    try:
+        re.compile(input())
+        print(True)
+    except Exception:
+        print(False)
+        
+Problem E: Validating Roman Numerals
+digits = '(V?[I]{0,3}|I[VX])'
+tens = '(L?[X]{0,3}|X[LC])'
+hundreds = '(D?[C]{0,3}|C[DM])'
+thousands = 'M{0,3}'
+regex_pattern = thousands + hundreds + tens + digits +'$'
+
+
+
+import re
+print(str(bool(re.match(regex_pattern, input()))))
